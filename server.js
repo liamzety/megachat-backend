@@ -30,13 +30,13 @@ app.use(cors(corsOptions));
 
 const authRoutes = require("./api/auth/auth.routes");
 const addUserRoutes = require("./api/user/user.route");
-const addRoomRoutes = require("./api/room/room.route");
+const addChatRoutes = require("./api/chat/chat.route");
 const connectSockets = require("./api/socket/socket.routes");
 
 // routes
 app.use("/api/auth", authRoutes);
 app.use("/api/user", addUserRoutes);
-app.use("/api/room", addRoomRoutes);
+app.use("/api/chat", addChatRoutes);
 connectSockets(io);
 
 http.listen(port, () => {

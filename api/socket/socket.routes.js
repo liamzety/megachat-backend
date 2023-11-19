@@ -2,7 +2,7 @@ module.exports = connectSockets;
 
 function connectSockets(io) {
   io.on("connection", (socket) => {
-    socket.on("chat connectRoom", (megaChatPage) => {
+    socket.on("chat connectChat", (megaChatPage) => {
       if (socket.megaChatPage) {
         socket.leave(socket.megaChatPage);
       }
